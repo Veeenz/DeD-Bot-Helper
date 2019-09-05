@@ -24,12 +24,14 @@ client.on('message', (message: Message) => {
         } else {
             let dado = args[1]
             if(types.includes(dado)) {
-                message.reply(rollDice(dado));
+                message.reply('Result of the dice: ' + rollDice(dado));
             } else {
                 message.reply("Not a valid dice!");
             }
         }
+
     }
+
 })
 
 client.login(config.token);
